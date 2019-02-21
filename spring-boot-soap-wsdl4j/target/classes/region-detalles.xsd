@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://springbootsoap.oeste.xyz/region" 
+	xmlns:tns="http://springbootsoap.oeste.xyz/region" 
+	elementFormDefault="qualified">
+	
+	<xs:element name="GetRegionDetailsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idRegion" type="xs:int"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="GetRegionDetailsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RegionDetails" type="tns:RegionDetails"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="RegionDetails">
+		<xs:sequence>
+				<xs:element name="idRegion" type="xs:int"/>
+				<xs:element name="nombre" type="xs:string"/>
+			</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

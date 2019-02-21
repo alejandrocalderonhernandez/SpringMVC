@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>xyz.oeste</groupId>
+  <artifactId>integracion</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>integracion-model</module>
+  	<module>integracion-dao</module>
+  	<module>integracion-business</module>
+    <module>integracion-ws-soap</module>
+    <module>integracion-web</module>
+    <module>integracion-ws.soap-client</module>
+    <module>spring-boot-rest</module>
+    <module>spring-booot-soap</module>
+    <module>spring-boot-soap-wsdl4j</module>
+  </modules>
+</project>

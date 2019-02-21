@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+    xmlns:wss="http://jax-ws.dev.java.net/spring/servlet"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                        http://jax-ws.dev.java.net/spring/core
+                        http://jax-ws.java.net/spring/core.xsd
+                        http://jax-ws.dev.java.net/spring/servlet
+                        http://jax-ws.java.net/spring/servlet.xsd">
+                       
+        <context:annotation-config/>
+        <context:component-scan base-package="xyz.oeste.integracion"/>
+       
+        <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+            <property name="driverClassName" value="org.postgresql.Driver"/>
+            <property name="url" value="jdbc:postgresql://158.69.229.35:9926/pokemon"/>
+            <property name="username" value="spring"/>
+            <property name="password" value="12345"/>
+        </bean>
+       
+        <bean id="sessionFactory"
+              class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+            <property name="dataSource" ref="dataSource"/>
+            <property name="packagesToScan" value="xyz/oeste/integracion/model"/>
+            <property name="hibernateProperties">
+                <props>
+                    <prop key="hibernate.show_sql">true</prop>
+                    <prop key="hibernate.format_sql">true</prop>
+                </props>
+            </property>
+        </bean>
+       
+        <bean id="transactionManager"
+              class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+            <property name="sessionFactory" ref="sessionFactory"/>   
+        </bean>
+       
+        <tx:annotation-driven transaction-manager="transactionManager"/>
+        <wss:binding url="/wsholamundo">
+<!--         <wss:service>
+                 <ws:service bean="#holaMundoEndPoint"/>
+        </wss:service> -->
+        </wss:binding>
+        
+        <wss:binding url="/wsRegion">
+        <wss:service>
+                 <ws:service bean="#regionEndPoint"/>
+        </wss:service>
+        </wss:binding>
+ 
+</beans>

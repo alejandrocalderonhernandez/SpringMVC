@@ -1,0 +1,17 @@
+xyz\oeste\integracion\endpoints\BuscarTodos.class
+xyz\oeste\integracion\endpoints\package-info.class
+xyz\oeste\integracion\endpoints\Insertar.class
+xyz\oeste\integracion\endpoints\Servicio.class
+xyz\oeste\integracion\endpoints\InsertarResponse.class
+xyz\oeste\integracion\endpoints\ServicioEliminar.class
+xyz\oeste\integracion\endpoints\Exception.class
+xyz\oeste\integracion\endpoints\ServicioEliminarResponse.class
+xyz\oeste\integracion\endpoints\RegionEndPoint.class
+xyz\oeste\integracion\endpoints\ObjectFactory.class
+xyz\oeste\integracion\endpoints\Region.class
+xyz\oeste\integracion\endpoints\ServicioResponse.class
+xyz\oeste\integracion\endpoints\BuscarTodosResponse.class
+xyz\oeste\integracion\endpoints\Actualizar.class
+xyz\oeste\integracion\endpoints\Exception_Exception.class
+xyz\oeste\integracion\endpoints\ActualizarResponse.class
+xyz\oeste\integracion\endpoints\RegionEndPointService.class

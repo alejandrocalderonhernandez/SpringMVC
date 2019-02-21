@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>xyz.oeste</groupId>
+    <artifactId>integracion</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>xyz.oeste</groupId>
+  <artifactId>integracion-ws-soap</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>integracion-ws-soap Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+ <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-web</artifactId>
+    <version>5.0.8.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>xyz.oeste</groupId>
+    <artifactId>integracion-business</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/org.jvnet.jax-ws-commons.spring/jaxws-spring -->
+<dependency>
+    <groupId>org.jvnet.jax-ws-commons.spring</groupId>
+    <artifactId>jaxws-spring</artifactId>
+    <version>1.9</version>
+    <exclusions>
+    <exclusion>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+              </exclusion>
+              <exclusion>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+              </exclusion>
+              <exclusion>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+              </exclusion>
+              <exclusion>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+              </exclusion>
+              <exclusion>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+              </exclusion>
+              <exclusion>
+                <groupId>com.sun.xml.stream.buffer</groupId>
+                <artifactId>streambuffer</artifactId>
+              </exclusion>
+              <exclusion>
+                <groupId>org.jvnet.staxex</groupId>
+                <artifactId>stax-ex</artifactId>
+              </exclusion>
+    </exclusions>
+ 
+</dependency>
+ <!-- https://mvnrepository.com/artifact/com.sun.xml.ws/jaxws-rt -->
+<dependency>
+    <groupId>com.sun.xml.ws</groupId>
+    <artifactId>jaxws-rt</artifactId>
+    <version>2.2.8</version>
+</dependency>
+ 
+  </dependencies>
+  <build>
+    <finalName>integracion-ws-soap</finalName>
+  </build>
+</project>
